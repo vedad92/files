@@ -1,6 +1,7 @@
 __winc_id__ = "ae539110d03e49ea8738fd413ac44ba8"
 __human_name__ = "files"
 
+from importlib.resources import path
 import os
 import shutil
 
@@ -29,7 +30,7 @@ cache_zip(os.path.join(os.getcwd(), 'files', 'data.zip'), os.path.join(os.getcwd
 
 def cached_files():
     path = os.path.join(os.getcwd(), 'cache')
-    files = os.listdir(path)
+    files = [os.path.join(path, f) for f in os.listdir(path)]
     return files
 print(cached_files())
 
