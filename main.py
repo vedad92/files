@@ -20,13 +20,7 @@ def cache_zip(zip_file, cache_dir):
     return
 
 cache_zip(os.path.join(os.getcwd(), 'files', 'data.zip'), os.path.join(os.getcwd(), 'cache'))
-# cache_zip(os.path.abspath('data.zip'), os.path.abspath('cache')) --> waarom werkt deze niet? 
-#   Op basis van deze uitleg zou het moeten werken: https://www.youtube.com/watch?v=U1CBgRJ6ARU
 
-#OUD:
-# cache_zip(
-#     r"C:\Users\Gebruiker\Documents\Wincacademy\files\data.zip",
-#     r"C:\Users\Gebruiker\Documents\Wincacademy\cache",)
 
 def cached_files():
     path = os.path.join(os.getcwd(), 'cache')
